@@ -1,0 +1,5 @@
+.vs
+Calculator/bin/Debug/**
+Calculator/bin/Release/**
+Calculator/obj/Debug/**
+Calculator/obj/Release/**

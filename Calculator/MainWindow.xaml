@@ -1,0 +1,38 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="250" Width="400">
+	<DockPanel>
+		<WrapPanel DockPanel.Dock="Bottom"  Margin="10,0,10,10">
+			<TextBlock Margin="0,0,10,0">
+				Input Base:
+			</TextBlock>
+			<TextBox Name="InputBase" PreviewTextInput="InputBase_CheckTextInput" TextChanged="TextBox_TextChanged" MinWidth="20" Margin="0,0,10,0"/>
+			<TextBlock Margin="0,0,10,0">
+				WIP Output Base:
+			</TextBlock>
+			<TextBox Name="OutputBase" PreviewTextInput="OutputBase_CheckTextInput" TextChanged="TextBox_TextChanged" MinWidth="20" Margin="0,0,10,0"/>
+			<TextBlock Margin="0,0,10,0"> 
+				Display fraction
+			</TextBlock>
+			<CheckBox Name="FractionCheckBox" Click="CheckBox_Click" VerticalContentAlignment="Center"/>
+			<TextBlock Margin="0,0,10,0"> 
+				Display ASCII character
+			</TextBlock>
+			<CheckBox Name="CharMode" Click="CheckBox_Click" VerticalContentAlignment="Center"/>
+		</WrapPanel>
+
+		<DockPanel >
+			<TextBlock DockPanel.Dock="Top" Margin="10,10,10,0">Type expression below:</TextBlock>
+			<TextBlock DockPanel.Dock="Bottom" Margin="10,10,10,10" x:Name="MathOutput" FontFamily="Cambria Math" FontWeight="Bold" FontSize="32pt"><Run Text="="/><Run Text="0"/></TextBlock>
+			<TextBox Name="MathInput" Margin="10,10,10,0" TextChanged="MathInput_Changed"  FontFamily="Cambria Math" FontWeight="Bold" FontSize="24pt"  />
+		</DockPanel>
+
+		
+
+	</DockPanel>
+</Window>
